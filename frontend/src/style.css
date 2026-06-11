@@ -1,0 +1,45 @@
+:root {
+  --primary: #1a1a1a;
+  --danger: #e74c3c;
+  --text: #1a1a1a;
+  --text-2: #888;
+  --bg: #f5f3f0;
+  --card: #ffffff;
+  --radius-xl: 32px;
+  --radius-lg: 28px;
+  --radius: 22px;
+  --radius-sm: 16px;
+  --van-primary-color: var(--primary);
+  --van-danger-color: var(--danger);
+  --van-text-color: var(--text);
+  --van-text-color-2: var(--text-2);
+  --van-background-color: var(--bg);
+  --van-border-radius: var(--radius);
+  --van-border-radius-lg: var(--radius-lg);
+  --van-button-border-radius: 28px;
+  --van-button-large-border-radius: 28px;
+  --van-button-large-height: 54px;
+  --van-cell-vertical-padding: 18px;
+  --van-rate-icon-size: 36px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 0; background: var(--bg); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif; -webkit-font-smoothing: antialiased; color: var(--text); }
+.page-container { min-height: 100vh; padding-bottom: 90px; background: var(--bg); }
+.page-container-no-tab { min-height: 100vh; padding-bottom: 90px; background: var(--bg); }
+.van-button--primary { font-weight: 700; font-size: 17px; height: 54px; box-shadow: 0 6px 20px rgba(0,0,0,0.10); transition: all 0.2s; }
+.van-button--primary:active { transform: scale(0.96); }
+.van-notify { border-radius: 18px; margin: 14px 16px; width: auto; font-size: 15px; }
+.status-tag { display: inline-block; padding: 6px 18px; border-radius: 16px; font-size: 14px; font-weight: 600; }
+.status-tag--pending_payment { background: #f0f0f0; color: #1a1a1a; }
+.status-tag--preparing { background: #e8e8e8; color: #1a1a1a; }
+.status-tag--waiting_pickup { background: #ddd; color: #1a1a1a; }
+.status-tag--completed { background: #f0f0f0; color: #888; }
+.status-tag--cancelled { background: #fce4ec; color: #c62828; }
+.van-empty__image { width: 160px; height: 160px; }
+.van-empty__description { font-size: 16px; color: #aaa; margin-top: 18px; }
+.van-rate__icon--full { color: #1a1a1a !important; }
+.van-cell { font-size: 17px; padding: 16px; }
+.page-top-bar { display: flex; align-items: center; padding: 20px 24px 10px; gap: 14px; min-height: 74px; }
+.page-back-btn { width: 48px; height: 48px; border-radius: 18px; border: none; background: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 3px 10px rgba(0,0,0,0.05); flex-shrink: 0; transition: transform 0.15s; }
+.page-back-btn:active { transform: scale(0.9); }
+.page-top-title { font-size: 26px; font-weight: 800; color: #1a1a1a; margin: 0; flex: 1; }

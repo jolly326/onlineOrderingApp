@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+
+# Django
+backend/media/dishes/*
+!backend/media/dishes/.gitkeep
+*.sqlite3
+db.sqlite3
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Sensitive config
+backend/config.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+migrate.log
