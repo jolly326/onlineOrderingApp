@@ -60,13 +60,15 @@ function openPickupDialog(orderId: string) {
 async function handlePickupConfirm() {
   if (!pickupCode.value.trim()) { showToast('请输入取餐码'); return }
   try {
-    await orderApi.merchantConfirmPickup(confirmPickupOrderId.value, pickupCode.value.trim())
+    const r: any = await orderApi.merchantConfirmPickup(confirmPickupOrderId.value, pickupCode.value.trim())
+    if (r.code !== 200) { throw r }
     showPickupDialog.value = false
     showToast('取餐确认成功')
     loadOrders()
-  } catch {
+  } catch (e: any) {
     showPickupDialog.value = false
-    showToast('取餐码错误')
+    const msg = e?.message || '取餐码错误'
+    showToast(msg)
   }
 }
 

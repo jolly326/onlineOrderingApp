@@ -17,6 +17,12 @@ class RegisterSerializer(serializers.ModelSerializer):
         model = User
         fields = ['username', 'phone', 'password', 'role']
 
+    def validate_username(self, value):
+        """校验用户名唯一性"""
+        if User.objects.filter(username=value).exists():
+            raise serializers.ValidationError('该用户名已被使用')
+        return value
+
     def validate_phone(self, value):
         """校验手机号格式和唯一性"""
         if not value.isdigit() or len(value) != 11:
